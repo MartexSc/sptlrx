@@ -61,8 +61,8 @@ type Config struct {
 	} `yaml:"mopidy"`
 
 	Mpris struct {
-		Name string `yaml:"name"`
-	}
+		Name string `default:"" yaml:"name"`
+	} `yaml:"mpris"`
 }
 
 func New() *Config {
