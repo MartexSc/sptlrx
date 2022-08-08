@@ -61,7 +61,7 @@ type Config struct {
 	} `yaml:"mopidy"`
 
 	Mpris struct {
-		Name string `yaml:"password"`
+		Name string `yaml:"name"`
 	}
 }
 

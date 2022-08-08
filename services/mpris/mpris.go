@@ -45,10 +45,14 @@ func (p *Client) getPlayer() (*mpris.Player, error) {
 	if len(names) == 0 {
 		return nil, nil
 	}
+
+	if len(p.name) == 0 {
+		return mpris.New(p.conn, names[0]), nil
+	}
+
 	if !stringInSlice(p.name, names) {
 		return nil, err
 	}
-
 	return mpris.New(p.conn, p.name), nil
 }
 
